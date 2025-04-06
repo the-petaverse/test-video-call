@@ -13,7 +13,7 @@ let serverMuted = false;
 let localAudioTrack = null;
 let tutorId = null;
 const consumedProducers = new Set();
-let userId;
+let sessionId, userId;
 const videoContainer = document.getElementById("videos");
 const remoteVideoContainer = document.getElementById("videoContainer");
 const tutorVideoContainer = document.getElementById("tutorVideoContainer");
@@ -26,7 +26,7 @@ const techSupportMessagesDiv = document.getElementById("supportChatMessages");
 // const userId = "67c46c6d4643e114f1319132";
 // const userId = "67c57525f5a4e710fda6fe58";
 // const userId = "67ce268eddfbd0c08b5fdf8a";
-const sessionId = "67d433b2d262017844bc4211";
+sessionId = "67d433b2d262017844bc4211";
 
 socket.on("connect", () => {
   console.log("✅ Connected:", socket.id);
