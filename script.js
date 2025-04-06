@@ -39,7 +39,7 @@ socket.on("connect_error", (err) => {
 const joinSession = async () => {
   console.log("connected");
   userId = document.getElementById("userId").value.trim();
-  sessionId = document.getElementById("sessionId").value.trim();
+  // sessionId = document.getElementById("sessionId").value.trim();
 
   if (!userId || !sessionId) {
     alert("Please enter both User ID and Session ID");
