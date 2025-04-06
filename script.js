@@ -1,4 +1,7 @@
-const socket = io("https://apitest.mydialecta.com");
+io("https://apitest.mydialecta.com", {
+  transports: ["websocket", "polling"],
+  withCredentials: true,
+});
 let techSupportSocket;
 let device, sendTransport, recvTransport;
 let producers = {};
