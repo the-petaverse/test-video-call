@@ -28,6 +28,14 @@ const techSupportMessagesDiv = document.getElementById("supportChatMessages");
 // const userId = "67ce268eddfbd0c08b5fdf8a";
 // const sessionId = "67d433b2d262017844bc4211";
 
+socket.on("connect", () => {
+  console.log("✅ Connected:", socket.id);
+  socket.emit("joinSession", { userId: "123", sessionId: "abc" });
+});
+
+socket.on("connect_error", (err) => {
+  console.error("❌ Connection error:", err.message);
+});
 const joinSession = async () => {
   console.log("connected");
   userId = document.getElementById("userId").value.trim();
