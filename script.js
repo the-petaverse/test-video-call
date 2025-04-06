@@ -1,4 +1,4 @@
-io("https://apitest.mydialecta.com", {
+const socket = io("https://apitest.mydialecta.com", {
   transports: ["websocket", "polling"],
   withCredentials: true,
 });
