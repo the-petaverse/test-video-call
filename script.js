@@ -30,7 +30,7 @@ const techSupportMessagesDiv = document.getElementById("supportChatMessages");
 
 socket.on("connect", () => {
   console.log("✅ Connected:", socket.id);
-  socket.emit("joinSession", { userId: "123", sessionId: "abc" });
+  console.log("👉 Transport:", socket.io.engine.transport.name);
 });
 
 socket.on("connect_error", (err) => {
