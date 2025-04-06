@@ -1,4 +1,4 @@
-const socket = io("https://apitest.mydialecta.com", {
+const socket = io("https://apitest.mydialecta.com/join-class", {
   transports: ["websocket", "polling"],
   withCredentials: true,
 });
