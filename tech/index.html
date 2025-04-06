@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Support Dashboard</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
+      #sessionsList,
+      #chatContainer {
+        border: 1px solid #ddd;
+        padding: 10px;
+        width: 100%;
+        max-width: 350px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+      #sessionsList {
+        overflow-y: auto;
+      }
+      #chatMessages {
+        overflow-y: auto;
+        flex-grow: 1;
+        background: #f7f7f7;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- List of incoming support requests -->
+    <div id="sessionsList">
+      <h3>Incoming Requests</h3>
+      <!-- dynamically populated -->
+    </div>
+
+    <!-- Chat Area -->
+    <div id="chatContainer">
+      <h3>Support Chat</h3>
+      <div id="chatMessages"></div>
+      <input type="text" id="replyInput" placeholder="Type your reply..." />
+      <button id="sendReply">Send Reply</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
